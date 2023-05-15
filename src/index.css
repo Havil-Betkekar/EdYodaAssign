@@ -1,13 +1,519 @@
-body {
+.navHead {
+  height: 72px;
+}
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 72px;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbarNav {
+  width: 100%;
+  margin-top: 0.75rem;
+  overflow-y: hidden;
+}
+.navbarUl {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbarListItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbarSearchItem {
+  list-style: none;
+  cursor: pointer;
+  padding: 5px 0 0 330px;
+}
+.arrowIcon1 {
+  background-image: url("../src/assets/ArrowIcon.png");
+  width: 13px;
+  height: 8px;
+  position: absolute;
+top: 40px;
+left: 362px;
+}
+.arrowIcon2 {
+  background-image: url("../src/assets/ArrowIcon.png");
+  width: 13px;
+  height: 8px;
+  position: absolute;
+top: 40px;
+left: 495px;
+}
+.joinNowButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 42px;
+  gap: 10px;
+  width: 166px;
+  height: 40px;
+  background: linear-gradient(266.79deg, #0048ff 4.63%, #0096ff 100%);
+  border-radius: 52px;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+.joinNowButton:hover{
+  transform: scale(1.1);
+}
+.mainBgClass {
+  position: absolute;
+  background-image: url("../src/assets/Back\ Ground.jpg");
+  /* width: 1920px; */
+  height: 1008px;
+  left: 0;
+  right: 0;
+}
+.courseDivClass {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 48px;
+  position: absolute;
+  width: 799px;
+  height: 708px;
+  left: 144px;
+  top: 72px;
+}
+.paymentDivClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 24px;
+  gap: 28px;
+  position: absolute;
+  width: 549px;
+  height: 850px;
+  right: 35px;
+  top: 72px;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.paymentHeading p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+.headingPriceColor {
+  color: #0096ff;
+  padding: 0 10px 0;
+}
+.strikeClass {
+  text-decoration: line-through;
+  text-decoration-color: #ff0000;
+  text-decoration-thickness: 4px;
+  padding-right: 5px;
+}
+.courseDetailsClass p {
+  /* font-family: 'Roboto'; */
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+}
+
+.blueTextClass {
+  color: #0096ff;
+}
+.offerExpiredClass {
+  position: absolute;
+  width: 121px;
+  height: 16px;
+  left: 62px;
+  top: 123px;
+  background: #f77171;
+  border-radius: 0px 0px 4px 4px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  padding: 0px 0 3px;
+}
+
+.disabledSubscriptionClass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  isolation: isolate;
+  width: 501px;
+  height: 30px;
+  background: #e7e7e7;
+  border: 2px solid #bebebe;
+  border-radius: 4px;
+}
+.disabledTextClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #bebebe;
+}
+.subscriptionClass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  isolation: isolate;
+  width: 501px;
+  height: 30px;
+  background: #ffffff;
+  border: 2px solid #bebebe;
+  border-radius: 4px;
+}
+/*  */
+.subscriptionBgClass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  isolation: isolate;
+  width: 501px;
+  height: 45px;
+  background: #d7eddd;
+  border: 2px solid #bebebe;
+  border-radius: 4px;
+}
+/*  */
+.subcribtionTextClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #3c4852;
+}
+/*  */
+
+/*  */
+.recommendedClass {
+  position: absolute;
+  width: 121px;
+  height: 16px;
+  left: 62px;
+  top: 219px;
+  background: #47ba68;
+  border-radius: 0px 0px 4px 4px;
+  flex: none;
+  flex-grow: 0;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 120%;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.numberClass {
+  display: flex;
+}
+.regNumberClass {
+  margin: 0px 60px 0;
+  width: 42px;
+  height: 42px;
+  background: #0096ff;
+  border-radius: 1000px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.signupClass {
+  width: 54px;
+  height: 19px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #3c4852;
+  position: relative;
+  left: 57px;
+}
+
+.subscribeClass {
+  width: 70px;
+  height: 19px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #3c4852;
+  position: relative;
+  left: 53px;
+}
+
+.subscriptionTextClass p {
+  font-size: 25px;
+  line-height: 0;
+  font-family: "Roboto";
+  margin: 0 0 0;
+}
+.hrClass {
+  border: 1px solid #bebebe;
+  margin-top: 0px;
+  width: 500px;
+}
+.subscFeeClass {
+  display: grid;
+  grid-template-columns: 3fr 0fr;
+  grid-gap: 250px;
+  height: 5px;
+}
+.subscFeeTextClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3c4852;
+}
+.subscFeeAmountClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #3c4852;
+}
+.limitedOfferClass {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 24px;
+  gap: 4px;
+  width: 535px;
+  height: 76px;
+  background: linear-gradient(
+    135deg,
+    rgba(222, 67, 19, 0.2) 0%,
+    rgba(222, 67, 19, 0.2) 0.75%,
+    rgba(222, 67, 19, 0.2) 2.92%,
+    rgba(222, 68, 20, 0.2) 6.37%,
+    rgba(223, 69, 21, 0.2) 10.97%,
+    rgba(223, 72, 22, 0.2) 16.59%,
+    rgba(224, 75, 24, 0.2) 23.1%,
+    rgba(225, 80, 27, 0.2) 30.37%,
+    rgba(227, 86, 31, 0.2) 38.27%,
+    rgba(229, 94, 36, 0.2) 46.66%,
+    rgba(231, 104, 43, 0.2) 55.41%,
+    rgba(235, 117, 51, 0.2) 64.39%,
+    rgba(238, 132, 60, 0.2) 73.47%,
+    rgba(243, 149, 71, 0.2) 82.52%,
+    rgba(248, 169, 84, 0.2) 91.41%,
+    rgba(254, 193, 99, 0.2) 100%
+  );
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 280px;
+}
+.offerTextClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #de4313;
+}
+.offerAmountClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #3c4852;
+}
+.lmtdOfferDivClass {
+  padding: 5px 3px;
+  gap: 28px;
+  position: absolute;
+  left: 40px;
+}
+.lmtdOfferIconClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #de4313;
+}
+.lmtdOffIcon {
+  padding: 5px 10px 0;
+}
+.icon {
+  color: #ff0000;
+}
+
+.totalDivClass {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 250px;
+}
+.totalClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #3c4852;
+}
+.finalTotalClass {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #3c4852;
+}
+.totalClass span {
+  font-weight: 400;
+  padding-left: 5px;
+}
+.buttonDivClass {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 250px;
+}
+.cancelClassbtn {
+  position: absolute;
+  width: 235px;
+  height: 58px;
+  background: #ffffff;
+  border-radius: 8px;
+  line-height: 1;
+  font-size: 16px;
+  color: #f77171;
+  border: 1px solid #f77171;
+  font-family: "Roboto";
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.cancelClassbtn:hover{
+  transform: scale(1.1);
+}
+
+.proceedClassbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 42px;
+  gap: 10px;
+  width: 242.5px;
+  height: 56px;
+  background: #47ba68;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.proceedClassbtn:hover{
+  transform: scale(1.1);
+}
+.amntClass {
+  width: 36px;
+  height: 19px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  color: #3c4852;
+  position: relative;
+  left: 210px;
+}
+.amntClass span {
+  font-weight: 400;
+  padding-right: 10px;
+}
+
+.moClass {
+  position: relative;
+  top: 15px;
+  left: 190px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #3c4852;
+}
+.razorLogoClass svg {
+  position: relative;
+  width: 120px;
+  height: 42.69px;
+  right: 205px;
+  bottom: 10px;
 }
